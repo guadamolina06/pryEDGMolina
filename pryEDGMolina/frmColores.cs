@@ -16,5 +16,30 @@ namespace pryEDGMolina
         {
             InitializeComponent();
         }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.Grabar(txtNombre.Text);
+            MessageBox.Show("Se guardo el color");
+            txtNombre.Text = "";
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "")
+            {
+                btnGrabar.Enabled = false;
+            }
+            else
+            {
+                btnGrabar.Enabled = true;
+            }
+          }
+
+        private void frmColores_Load(object sender, EventArgs e)
+        {
+            btnGrabar.Enabled = false;
+        }
     }
-}
+    }
