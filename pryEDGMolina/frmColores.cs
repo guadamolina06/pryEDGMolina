@@ -20,8 +20,9 @@ namespace pryEDGMolina
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             clsArchivo x = new clsArchivo();
+            x.NomArchi = "Colores.txt";
             x.Grabar(txtNombre.Text);
-            MessageBox.Show("Se guardo el color");
+            x.Recorrer(lstColores);
             txtNombre.Text = "";
         }
 
