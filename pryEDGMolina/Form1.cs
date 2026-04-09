@@ -50,5 +50,11 @@ namespace pryEDGMolina
         {
 
         }
+
+        private void carrerasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCarreras v = new frmCarreras();
+            v.ShowDialog();
+        }
     }
 }

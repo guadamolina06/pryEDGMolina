@@ -1,4 +1,4 @@
-﻿using System;
+﻿  using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,7 @@ namespace pryEDGMolina
     internal class clsArchivo
     {
         //Crear un campo
-        public string NomArchi ="colores.txt";
+        public string NomArchi = "colores.txt";
 
 
         public void Grabar()
@@ -31,9 +31,9 @@ namespace pryEDGMolina
             AD.Close();
 
         }
-        public void Recorrer (ComboBox cmbDatos)
+        public void Recorrer(ComboBox cmbDatos)
         {
-          cmbDatos.Items.Clear();
+            cmbDatos.Items.Clear();
             string DatoLeido = "";
             StreamReader AD = new StreamReader(NomArchi);
             DatoLeido = AD.ReadLine();
@@ -71,9 +71,33 @@ namespace pryEDGMolina
             }
             AD.Close();
         }
+        public void BorrarTodo()
+        {  
+            StreamWriter AD = new StreamWriter(NomArchi, false);
+            //Abrir el archivo para la escritura, pero sin agregar nada,
+            //es decir, borra todo lo que hay en el archivo
+            AD.Close();//Cierra el archivo
+
+        }
+        private void Grabar(String cod, String nom, String deu)
+        { 
+         StreamWriter AD = new StreamWriter(NomArchi, true);
+            AD.Write(cod);//Graba el codigo
+            AD.Write(";");
+            AD.Write(nom);//Graba el codigo
+            AD.Write(";");
+            AD.WriteLine(deu); //Graba el codigo y hace un salto de linea
+            AD.Close();
 
 
+        }
     }
-   
-  
 }
+             
+        
+
+
+        
+    
+  
+

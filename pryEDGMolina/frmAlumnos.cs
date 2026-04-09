@@ -16,5 +16,10 @@ namespace pryEDGMolina
         {
             InitializeComponent();
         }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
