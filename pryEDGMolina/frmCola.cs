@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace pryEDGMolina
 {
-    public partial class frmClientes : Form
+    public partial class frmCola : Form
     {
-        public frmClientes()
+        public frmCola()
         {
             InitializeComponent();
-        }
-
-        private void frmClientes_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

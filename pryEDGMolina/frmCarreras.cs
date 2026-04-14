@@ -34,5 +34,10 @@ namespace pryEDGMolina
             objCarrera.Recorrer(lstCarrera);
             txtCarrera.Clear();
         }
+
+        private void frmCarreras_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
