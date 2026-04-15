@@ -31,6 +31,14 @@ namespace pryEDGMolina
             AD.Close();
 
         }
+        public void Grabar(string cod, string nom)
+        {
+            StreamWriter AD = new StreamWriter(NomArchi, true);
+            AD.Write(cod);
+            AD.Write(";");
+            AD.WriteLine(nom);
+            AD.Close();
+        }
         public void Recorrer(ComboBox cmbDatos)
         {
             cmbDatos.Items.Clear();
@@ -66,7 +74,7 @@ namespace pryEDGMolina
             DatoLeido = AD.ReadLine();
             while (DatoLeido != null)
             {
-                dgvDatos.Rows.Add(DatoLeido);
+                dgvDatos.Rows.Add(DatoLeido.Split(';'));
                 DatoLeido = AD.ReadLine();
             }
             AD.Close();
@@ -79,7 +87,7 @@ namespace pryEDGMolina
             AD.Close();//Cierra el archivo
 
         }
-        private void Grabar(String cod, String nom, String deu)
+        public void Grabar(String cod, String nom, String deu)
         { 
          StreamWriter AD = new StreamWriter(NomArchi, true);
             AD.Write(cod);//Graba el codigo
