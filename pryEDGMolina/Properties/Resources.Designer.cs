@@ -69,5 +69,25 @@ namespace pryEDGMolina.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2026_04_15_133423 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2026-04-15 133423", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2026_04_15_at_15_01_09 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2026-04-15 at 15.01.09", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
