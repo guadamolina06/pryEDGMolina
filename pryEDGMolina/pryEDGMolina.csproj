@@ -147,5 +147,11 @@
   <ItemGroup>
     <None Include="Resources\Azul y amarillo Moderno Informe Mensual Presentación.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2026-04-15 133423.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2026-04-15 at 15.01.09.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

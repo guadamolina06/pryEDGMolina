@@ -16,5 +16,10 @@ namespace pryEDGMolina
         {
             InitializeComponent();
         }
+
+        private void frmCola_Load(object sender, EventArgs e)
+        {
+            dgvCola.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
     }
 }
