@@ -63,5 +63,10 @@ namespace pryEDGMolina
             frmCola v = new frmCola();
             v.ShowDialog();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
