@@ -20,7 +20,7 @@ namespace pryEDGMolina
             get { return nom; }
             set { nom = value; }
         }
-        public Int32 Cod
+        public Int32 Codigo
         {
             get { return cod; }
             set { cod = value; }
