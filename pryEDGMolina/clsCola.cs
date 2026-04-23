@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace pryEDGMolina
 {
     internal class clsCola
@@ -77,7 +78,7 @@ namespace pryEDGMolina
             lista.Items.Clear();
             while (aux != null)
             {
-                lista.Items.Add(aux.Nombre + aux.Codigo + aux.Tramite);
+                lista.Items.Add(aux.Nombre + " " + aux.Codigo + " " + aux.Tramite);
                 aux = aux.Siguiente;
 
             }
@@ -87,7 +88,7 @@ namespace pryEDGMolina
              clsNodos aux = prim;
              StreamWriter AD = new StreamWriter("Cola.csv", false, Encoding.UTF8);
              AD.WriteLine("Lista de espera\n");
-             AD.WriteLine("Codigo;Nomnbre;Tramite");
+             AD.WriteLine("Codigo; Nomnbre; Tramite");
             while (aux != null)
             {
                 AD.Write(aux.Codigo);
