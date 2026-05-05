@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Windows.Forms;
 
 namespace pryEDGMolina
 {
@@ -13,6 +15,7 @@ namespace pryEDGMolina
         private string tram;
         private Int32 cod;
         private clsNodos sig;
+        private clsNodos ant;
 
         //Se crean las propiedades para cada campo
         public string Nombre
@@ -34,6 +37,11 @@ namespace pryEDGMolina
         {
             get { return sig; }
             set { sig = value; }
+        }
+        public clsNodos Anterior 
+        {
+            get { return ant; }
+            set { ant = value; }
         }
     }
 }
