@@ -14,12 +14,12 @@ namespace pryEDGMolina
         private clsNodos pri;
         private clsNodos ult;
         //propiedades
-        public clsNodos Primero 
+        public clsNodos Primero
         {
             get { return pri; }
             set { pri = value; }
         }
-        public clsNodos Ultimo 
+        public clsNodos Ultimo
         {
             get { return ult; }
             set { ult = value; }
@@ -30,45 +30,54 @@ namespace pryEDGMolina
             if (Primero == null)
             {
                 Primero = Nvo;
-                Ultimo = Nvo; 
+                Ultimo = Nvo;
             }
-            else 
+            else
             {
-                if (Nvo.Codigo > Ultimo.Codigo)
+                if (Nvo.Codigo <= Primero.Codigo)
                 {
                     Nvo.Siguiente = Primero;
                     Primero.Anterior = Nvo;
                     Primero = Nvo;
                 }
-                else 
+                else
                 {
-                    clsNodos Aux = Primero;
-                    clsNodos Ant = Primero;
-                    while (Aux.Codigo < Nvo.Codigo) 
+                    if (Nvo.Codigo >= Ultimo.Codigo)
                     {
-                        Ant = Aux;
-                        Aux = Aux.Siguiente;
+                        Nvo.Anterior = Ultimo;
+                        Ultimo.Siguiente = Nvo;
+                        Ultimo = Nvo;
                     }
-                    Ant.Siguiente = Nvo;
-                    Nvo.Siguiente= Aux;
-                    Aux.Anterior = Nvo;
-                    Nvo.Anterior = Ant;
+                    else
+                    {
+
+
+                        clsNodos Aux = Primero;
+                        clsNodos Ant = Primero;
+                        while (Aux.Codigo < Nvo.Codigo)
+                        {
+                            Ant = Aux;
+                            Aux = Aux.Siguiente;
+                        }
+                        Ant.Siguiente = Nvo;
+                        Nvo.Siguiente = Aux;
+                        Aux.Anterior = Nvo;
+                        Nvo.Anterior = Ant;
+                    }
                 }
             }
         }
-        public void Recorrer(ListBox Lista) 
+        public void Recorrer(ListBox Lista)
         {
-          
             clsNodos aux = Primero;
             Lista.Items.Clear();
-            while (aux != null) 
+            while (aux != null)
             {
                 Lista.Items.Add(aux.Codigo + " " + aux.Nombre + " " + aux.Tramite);
                 aux = aux.Siguiente;
             }
-        
         }
-        public void Recorrer(String NombreArchivo) 
+        public void Recorrer(String NombreArchivo)
         {
             clsNodos aux = Primero;
             StreamWriter AD = new StreamWriter(NombreArchivo, false, Encoding.UTF8);
@@ -81,13 +90,12 @@ namespace pryEDGMolina
                 AD.Write(aux.Nombre);
                 AD.Write(";");
                 AD.Write(aux.Tramite);
-                aux=aux.Siguiente; 
+                aux = aux.Siguiente;
             }
             AD.Close();
- 
         }
 
-        public void Recorrer(ComboBox Combo) 
+        public void Recorrer(ComboBox Combo)
         {
             clsNodos aux = Primero;
             Combo.Items.Clear();
@@ -97,11 +105,11 @@ namespace pryEDGMolina
                 aux = aux.Siguiente;
             }
         }
-        public void Recorrer(DataGridView Grilla) 
+        public void Recorrer(DataGridView Grilla)
         {
             clsNodos aux = Primero;
             Grilla.Rows.Clear();
-            while (aux != null) 
+            while (aux != null)
             {
                 Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
                 aux = aux.Siguiente;
@@ -109,20 +117,20 @@ namespace pryEDGMolina
         }
         public void Eliminar(Int32 Codigo)
         {
-            if (Primero.Codigo == Codigo && Ultimo == Primero) 
+            if (Primero.Codigo == Codigo && Ultimo == Primero)
             {
                 Primero = null;
                 Ultimo = null;
-               
+
             }
-            else 
+            else
             {
                 if (Primero.Codigo == Codigo)
                 {
                     Primero = Primero.Siguiente;
                     Primero.Anterior = null;
                 }
-                else 
+                else
                 {
                     if (Ultimo.Codigo == Codigo)
                     {
@@ -130,16 +138,16 @@ namespace pryEDGMolina
                         Ultimo.Siguiente = null;
 
                     }
-                    else 
+                    else
                     {
 
                         clsNodos aux = Primero;
                         clsNodos ant = Primero;
-                        while (aux.Codigo < Codigo) 
+                        while (aux.Codigo < Codigo)
                         {
                             ant = aux;
                             aux = aux.Siguiente;
-                        
+
                         }
                         aux = aux.Siguiente;
                         aux.Anterior = ant;
@@ -147,6 +155,37 @@ namespace pryEDGMolina
 
                     }
                 }
+            }
+        }
+        public void RecorrerDes(DataGridView Grilla)
+        {
+            clsNodos aux = Ultimo;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Anterior;
+
+            }
+        }
+        public void RecorrerDes(ListBox Lista)
+        {
+            clsNodos aux = Ultimo;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.Codigo + " " + aux.Nombre + " " + aux.Tramite);
+                aux = aux.Anterior;
+            }
+        }
+        public void RecorrerDes(ComboBox Combo)
+        {
+            clsNodos aux = Ultimo;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Nombre);
+                aux = aux.Anterior;
             }
         }
     }

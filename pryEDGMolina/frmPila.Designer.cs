@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPila));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gpvListadoCola = new System.Windows.Forms.GroupBox();
             this.lstPila = new System.Windows.Forms.ListBox();
@@ -317,6 +318,7 @@
             this.Controls.Add(this.gpvListadoCola);
             this.Controls.Add(this.gpbElementoEliminado);
             this.Controls.Add(this.gbxNuevoElemo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPila";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pila";

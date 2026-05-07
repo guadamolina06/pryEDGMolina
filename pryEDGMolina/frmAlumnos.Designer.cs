@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlumnos));
             this.btnGrabar = new System.Windows.Forms.Button();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
+            this.clmCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCarrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCarrera = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.clmCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCarrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbCarreras = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +69,27 @@
             this.dgvAlumnos.RowTemplate.Height = 24;
             this.dgvAlumnos.Size = new System.Drawing.Size(354, 136);
             this.dgvAlumnos.TabIndex = 14;
+            // 
+            // clmCodigo
+            // 
+            this.clmCodigo.HeaderText = "Codigo";
+            this.clmCodigo.MinimumWidth = 6;
+            this.clmCodigo.Name = "clmCodigo";
+            this.clmCodigo.Width = 125;
+            // 
+            // clmNombre
+            // 
+            this.clmNombre.HeaderText = "Nombre";
+            this.clmNombre.MinimumWidth = 6;
+            this.clmNombre.Name = "clmNombre";
+            this.clmNombre.Width = 125;
+            // 
+            // clmCarrera
+            // 
+            this.clmCarrera.HeaderText = "Carrera";
+            this.clmCarrera.MinimumWidth = 6;
+            this.clmCarrera.Name = "clmCarrera";
+            this.clmCarrera.Width = 125;
             // 
             // txtNombre
             // 
@@ -118,27 +140,6 @@
             this.lblCodigo.TabIndex = 8;
             this.lblCodigo.Text = "Codigo";
             // 
-            // clmCodigo
-            // 
-            this.clmCodigo.HeaderText = "Codigo";
-            this.clmCodigo.MinimumWidth = 6;
-            this.clmCodigo.Name = "clmCodigo";
-            this.clmCodigo.Width = 125;
-            // 
-            // clmNombre
-            // 
-            this.clmNombre.HeaderText = "Nombre";
-            this.clmNombre.MinimumWidth = 6;
-            this.clmNombre.Name = "clmNombre";
-            this.clmNombre.Width = 125;
-            // 
-            // clmCarrera
-            // 
-            this.clmCarrera.HeaderText = "Carrera";
-            this.clmCarrera.MinimumWidth = 6;
-            this.clmCarrera.Name = "clmCarrera";
-            this.clmCarrera.Width = 125;
-            // 
             // cmbCarreras
             // 
             this.cmbCarreras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -161,6 +162,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCarrera);
             this.Controls.Add(this.lblCodigo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAlumnos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaDoble));
             this.gpbListado = new System.Windows.Forms.GroupBox();
             this.dgvListaDoble = new System.Windows.Forms.DataGridView();
             this.clmCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,22 +50,14 @@
             this.gpbListarDatos = new System.Windows.Forms.GroupBox();
             this.rbtAscendente = new System.Windows.Forms.RadioButton();
             this.rbtDecendente = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gpbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
             this.gpbEliminarElemento.SuspendLayout();
             this.gpbNuevoElemento.SuspendLayout();
             this.gpbListarDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(7, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(252, 195);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // gpbListado
             // 
@@ -73,7 +65,7 @@
             this.gpbListado.Controls.Add(this.lstLista);
             this.gpbListado.Location = new System.Drawing.Point(10, 221);
             this.gpbListado.Name = "gpbListado";
-            this.gpbListado.Size = new System.Drawing.Size(660, 233);
+            this.gpbListado.Size = new System.Drawing.Size(660, 223);
             this.gpbListado.TabIndex = 6;
             this.gpbListado.TabStop = false;
             this.gpbListado.Text = "Listado en una Lista y Grilla";
@@ -117,7 +109,7 @@
             // lstLista
             // 
             this.lstLista.FormattingEnabled = true;
-            this.lstLista.Location = new System.Drawing.Point(5, 25);
+            this.lstLista.Location = new System.Drawing.Point(5, 17);
             this.lstLista.Margin = new System.Windows.Forms.Padding(2);
             this.lstLista.Name = "lstLista";
             this.lstLista.Size = new System.Drawing.Size(225, 199);
@@ -270,32 +262,45 @@
             this.rbtAscendente.TabStop = true;
             this.rbtAscendente.Text = "Ascendente";
             this.rbtAscendente.UseVisualStyleBackColor = true;
+            this.rbtAscendente.CheckedChanged += new System.EventHandler(this.rbtAscendente_CheckedChanged);
             // 
             // rbtDecendente
             // 
             this.rbtDecendente.Location = new System.Drawing.Point(4, 67);
             this.rbtDecendente.Margin = new System.Windows.Forms.Padding(2);
             this.rbtDecendente.Name = "rbtDecendente";
-            this.rbtDecendente.Size = new System.Drawing.Size(80, 20);
+            this.rbtDecendente.Size = new System.Drawing.Size(93, 20);
             this.rbtDecendente.TabIndex = 0;
             this.rbtDecendente.TabStop = true;
             this.rbtDecendente.Text = "Decendente";
             this.rbtDecendente.UseVisualStyleBackColor = true;
+            this.rbtDecendente.CheckedChanged += new System.EventHandler(this.rbtDecendente_CheckedChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::pryEDGMolina.Properties.Resources.lstD;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(233, 196);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // frmListaDoble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 465);
+            this.ClientSize = new System.Drawing.Size(682, 456);
             this.Controls.Add(this.gpbListarDatos);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gpbListado);
             this.Controls.Add(this.gpbEliminarElemento);
             this.Controls.Add(this.gpbNuevoElemento);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmListaDoble";
-            this.Text = "frmListaDoble";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Text = "Lista Doble";
             this.gpbListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();
             this.gpbEliminarElemento.ResumeLayout(false);
@@ -304,6 +309,7 @@
             this.gpbNuevoElemento.PerformLayout();
             this.gpbListarDatos.ResumeLayout(false);
             this.gpbListarDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

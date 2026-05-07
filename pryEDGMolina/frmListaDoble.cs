@@ -50,5 +50,25 @@ namespace pryEDGMolina
 
             }
         }
+
+        private void rbtAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtAscendente.Checked == true)
+            {
+                Lista.Recorrer(dgvListaDoble);
+                Lista.Recorrer(lstLista);
+                Lista.Recorrer(cmbCodigo);
+                Lista.Recorrer("ListaDoble.csv");
+            }   
+        }
+
+        private void rbtDecendente_CheckedChanged(object sender, EventArgs e)
+        {
+          if (rbtDecendente.Checked == true)
+            {
+                Lista.RecorrerDes(dgvListaDoble);
+               
+            }
+        }
     }
 }

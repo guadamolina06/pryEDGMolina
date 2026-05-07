@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMeses));
             this.lstMeses = new System.Windows.Forms.ListBox();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@
             // 
             this.lstMeses.FormattingEnabled = true;
             this.lstMeses.Location = new System.Drawing.Point(33, 145);
-            this.lstMeses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstMeses.Margin = new System.Windows.Forms.Padding(2);
             this.lstMeses.Name = "lstMeses";
             this.lstMeses.Size = new System.Drawing.Size(246, 199);
             this.lstMeses.TabIndex = 9;
@@ -48,7 +49,7 @@
             // 
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabar.Location = new System.Drawing.Point(180, 75);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(98, 46);
             this.btnGrabar.TabIndex = 8;
@@ -60,7 +61,7 @@
             // 
             this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListar.Location = new System.Drawing.Point(33, 75);
-            this.btnListar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(2);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(98, 46);
             this.btnListar.TabIndex = 7;
@@ -71,7 +72,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(154, 28);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(134, 26);
             this.txtNombre.TabIndex = 6;
@@ -100,7 +101,8 @@
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMeses";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Meses";

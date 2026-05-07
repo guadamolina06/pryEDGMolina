@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ED.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -183,6 +186,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WhatsApp Image 2026-04-15 at 15.01.09.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lstD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista-enlazada.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ED.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
