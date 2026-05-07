@@ -63,7 +63,7 @@ namespace pryEDGMolina
             Lista.Items.Clear();
             while (aux != null) 
             {
-              Lista.Items.Add(aux.Codigo+" "+aux.Nombre+" "+aux.Tramite);
+                Lista.Items.Add(aux.Codigo + " " + aux.Nombre + " " + aux.Tramite);
                 aux = aux.Siguiente;
             }
         
