@@ -86,5 +86,11 @@ namespace pryEDGMolina
             frmPila v = new frmPila();
             v.ShowDialog();
         }
+
+        private void arbolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbol v = new frmArbol();
+            v.ShowDialog();
+        }
     }
 }
