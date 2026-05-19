@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsArboBinario.cs" />
     <Compile Include="clsArchivo.cs" />
     <Compile Include="clsCola.cs" />
     <Compile Include="clsListaDoble.cs" />

@@ -74,7 +74,7 @@
             // txtTramite
             // 
             this.txtTramite.Location = new System.Drawing.Point(96, 130);
-            this.txtTramite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTramite.Margin = new System.Windows.Forms.Padding(2);
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(89, 20);
             this.txtTramite.TabIndex = 6;
@@ -82,7 +82,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(96, 74);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(89, 20);
             this.txtNombre.TabIndex = 5;
@@ -90,7 +90,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(109, 26);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(76, 20);
             this.txtCodigo.TabIndex = 4;
@@ -98,7 +98,7 @@
             // txtAgregar
             // 
             this.txtAgregar.Location = new System.Drawing.Point(19, 160);
-            this.txtAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.txtAgregar.Name = "txtAgregar";
             this.txtAgregar.Size = new System.Drawing.Size(165, 37);
             this.txtAgregar.TabIndex = 3;
@@ -151,7 +151,7 @@
             // 
             this.cmbCodigo.FormattingEnabled = true;
             this.cmbCodigo.Location = new System.Drawing.Point(69, 132);
-            this.cmbCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCodigo.Name = "cmbCodigo";
             this.cmbCodigo.Size = new System.Drawing.Size(124, 21);
             this.cmbCodigo.TabIndex = 2;
@@ -169,7 +169,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(5, 160);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(190, 37);
             this.btnEliminar.TabIndex = 0;
@@ -195,7 +195,7 @@
             this.clmNombre,
             this.clmTramite});
             this.dgvListaSimple.Location = new System.Drawing.Point(234, 25);
-            this.dgvListaSimple.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvListaSimple.Margin = new System.Windows.Forms.Padding(2);
             this.dgvListaSimple.Name = "dgvListaSimple";
             this.dgvListaSimple.RowHeadersWidth = 51;
             this.dgvListaSimple.RowTemplate.Height = 24;
@@ -227,7 +227,7 @@
             // 
             this.lstLista.FormattingEnabled = true;
             this.lstLista.Location = new System.Drawing.Point(5, 25);
-            this.lstLista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstLista.Margin = new System.Windows.Forms.Padding(2);
             this.lstLista.Name = "lstLista";
             this.lstLista.Size = new System.Drawing.Size(225, 199);
             this.lstLista.TabIndex = 0;
@@ -255,6 +255,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaSimple";
             this.Text = "Estructura de Datos Lista Simple";
+            this.Load += new System.EventHandler(this.frmListaSimple_Load);
             this.gpbNuevoElemento.ResumeLayout(false);
             this.gpbNuevoElemento.PerformLayout();
             this.gpbEliminarElemento.ResumeLayout(false);

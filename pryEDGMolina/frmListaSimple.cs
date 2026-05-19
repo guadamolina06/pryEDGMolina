@@ -16,5 +16,10 @@ namespace pryEDGMolina
         {
             InitializeComponent();
         }
+
+        private void frmListaSimple_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

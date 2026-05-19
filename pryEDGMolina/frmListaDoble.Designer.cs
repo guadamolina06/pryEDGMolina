@@ -301,6 +301,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmListaDoble";
             this.Text = "Lista Doble";
+            this.Load += new System.EventHandler(this.frmListaDoble_Load);
             this.gpbListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();
             this.gpbEliminarElemento.ResumeLayout(false);

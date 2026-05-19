@@ -43,7 +43,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEquilibrar = new System.Windows.Forms.Button();
             this.cmbListado = new System.Windows.Forms.GroupBox();
-            this.dgvCola = new System.Windows.Forms.DataGridView();
+            this.dgvArbol = new System.Windows.Forms.DataGridView();
             this.clmCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +54,7 @@
             this.gbxNuevoElemo.SuspendLayout();
             this.gpbEliminarElemento.SuspendLayout();
             this.cmbListado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxNuevoElemo
@@ -83,6 +83,7 @@
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTramite
             // 
@@ -196,7 +197,7 @@
             // 
             // cmbListado
             // 
-            this.cmbListado.Controls.Add(this.dgvCola);
+            this.cmbListado.Controls.Add(this.dgvArbol);
             this.cmbListado.Controls.Add(this.rdbPost);
             this.cmbListado.Controls.Add(this.rdbPre);
             this.cmbListado.Controls.Add(this.rbtIn);
@@ -207,20 +208,20 @@
             this.cmbListado.TabStop = false;
             this.cmbListado.Text = "Listado del árbol";
             // 
-            // dgvCola
+            // dgvArbol
             // 
-            this.dgvCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCola.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvArbol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArbol.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmCodigo,
             this.clmNombre,
             this.clmTramite});
-            this.dgvCola.Location = new System.Drawing.Point(227, 18);
-            this.dgvCola.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvCola.Name = "dgvCola";
-            this.dgvCola.RowHeadersWidth = 51;
-            this.dgvCola.RowTemplate.Height = 24;
-            this.dgvCola.Size = new System.Drawing.Size(389, 199);
-            this.dgvCola.TabIndex = 3;
+            this.dgvArbol.Location = new System.Drawing.Point(227, 18);
+            this.dgvArbol.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvArbol.Name = "dgvArbol";
+            this.dgvArbol.RowHeadersWidth = 51;
+            this.dgvArbol.RowTemplate.Height = 24;
+            this.dgvArbol.Size = new System.Drawing.Size(389, 199);
+            this.dgvArbol.TabIndex = 3;
             // 
             // clmCodigo
             // 
@@ -275,6 +276,7 @@
             this.rbtIn.TabStop = true;
             this.rbtIn.Text = "In-Orden";
             this.rbtIn.UseVisualStyleBackColor = true;
+            this.rbtIn.CheckedChanged += new System.EventHandler(this.rbtIn_CheckedChanged);
             // 
             // treeView1
             // 
@@ -297,13 +299,14 @@
             this.Name = "frmArbol";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructuras Ramificadas - Arbol Binario";
+            this.Load += new System.EventHandler(this.frmArbol_Load);
             this.gbxNuevoElemo.ResumeLayout(false);
             this.gbxNuevoElemo.PerformLayout();
             this.gpbEliminarElemento.ResumeLayout(false);
             this.gpbEliminarElemento.PerformLayout();
             this.cmbListado.ResumeLayout(false);
             this.cmbListado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,7 +330,7 @@
         private System.Windows.Forms.RadioButton rdbPre;
         private System.Windows.Forms.RadioButton rbtIn;
         private System.Windows.Forms.RadioButton rdbPost;
-        private System.Windows.Forms.DataGridView dgvCola;
+        private System.Windows.Forms.DataGridView dgvArbol;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTramite;

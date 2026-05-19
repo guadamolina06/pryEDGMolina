@@ -70,5 +70,10 @@ namespace pryEDGMolina
                
             }
         }
+
+        private void frmListaDoble_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
