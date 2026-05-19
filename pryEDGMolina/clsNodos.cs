@@ -43,5 +43,15 @@ namespace pryEDGMolina
             get { return ant; }
             set { ant = value; }
         }
+        public clsNodos Izquierda
+        {
+            get { return sig; }
+            set { sig = value; }
+        }
+        public clsNodos Derecha
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
     }
 }
