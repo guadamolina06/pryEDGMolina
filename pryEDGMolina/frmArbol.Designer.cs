@@ -280,16 +280,16 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(12, 5);
+            this.treeView1.Location = new System.Drawing.Point(645, 12);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(221, 189);
+            this.treeView1.Size = new System.Drawing.Size(537, 426);
             this.treeView1.TabIndex = 9;
             // 
             // frmArbol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 450);
+            this.ClientSize = new System.Drawing.Size(1188, 450);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.cmbListado);
             this.Controls.Add(this.btnEquilibrar);
