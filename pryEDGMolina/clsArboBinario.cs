@@ -39,7 +39,28 @@ namespace pryEDGMolina
                 else Ant.Derecha = Nvo;
             }
         }
+        public void Recorrer(TreeView tree)
+        {
+            tree.Nodes.Clear();
+            TreeNode nodoPadre = new TreeNode("Arbol");
+            tree.Nodes.Add(nodoPadre);  
+            PreOrden(Raiz, nodoPadre);  
+            tree.ExpandAll();
 
+        }
+        private void PreOrden(clsNodos R, TreeNode nodoTreeView)
+        {
+            TreeNode NodoPadre = new TreeNode(R.Codigo.ToString());
+            nodoTreeView.Nodes.Add(NodoPadre);
+            if (R.Izquierda != null)
+            {
+                PreOrden(R.Izquierda, NodoPadre);
+            }
+            if (R.Derecha != null)
+            {
+                PreOrden(R.Derecha, NodoPadre);
+            }
+        }
         public void Recorrer(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
@@ -47,9 +68,15 @@ namespace pryEDGMolina
         }
         public void InOrdenAsc(DataGridView Dgv, clsNodos R)
         {
-            if (R.Izquierda != null) InOrdenAsc(Dgv, R.Izquierda);
+            if (R.Izquierda != null)
+            {
+                InOrdenAsc(Dgv, R.Izquierda);
+            }
             Dgv.Rows.Add(R.Nombre, R.Codigo, R.Tramite);
-            if (R.Derecha != null) InOrdenAsc(Dgv, R.Derecha);
+            if (R.Derecha != null)
+            {
+                InOrdenAsc(Dgv, R.Derecha);
+            }
         }
     }
 }
