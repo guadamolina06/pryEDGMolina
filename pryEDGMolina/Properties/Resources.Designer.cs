@@ -73,6 +73,16 @@ namespace pryEDGMolina.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Binary_tree__oriented_digraph_ {
+            get {
+                object obj = ResourceManager.GetObject("Binary_tree_(oriented_digraph)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_pantalla_2026_04_15_133423 {
             get {
                 object obj = ResourceManager.GetObject("Captura de pantalla 2026-04-15 133423", resourceCulture);
