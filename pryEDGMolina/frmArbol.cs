@@ -26,6 +26,7 @@ namespace pryEDGMolina
             ObjNodo.Tramite = txtTramite.Text;
             Arbol.Agregar(ObjNodo);
             Arbol.Recorrer(dgvArbol);
+            Arbol.Recorrer(treeView1);
         }
 
         private void frmArbol_Load(object sender, EventArgs e)
@@ -36,6 +37,8 @@ namespace pryEDGMolina
         private void rbtIn_CheckedChanged(object sender, EventArgs e)
         {
             Arbol.Recorrer(dgvArbol);
+            Arbol.Recorrer(treeView1);
+            Arbol.Recorrer(treeView1);
         }
     }
 }

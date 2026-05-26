@@ -51,10 +51,12 @@
             this.rdbPre = new System.Windows.Forms.RadioButton();
             this.rbtIn = new System.Windows.Forms.RadioButton();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbxNuevoElemo.SuspendLayout();
             this.gpbEliminarElemento.SuspendLayout();
             this.cmbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxNuevoElemo
@@ -66,7 +68,7 @@
             this.gbxNuevoElemo.Controls.Add(this.lblTramite);
             this.gbxNuevoElemo.Controls.Add(this.lblNombre);
             this.gbxNuevoElemo.Controls.Add(this.lblCodigo);
-            this.gbxNuevoElemo.Location = new System.Drawing.Point(239, 3);
+            this.gbxNuevoElemo.Location = new System.Drawing.Point(239, 10);
             this.gbxNuevoElemo.Name = "gbxNuevoElemo";
             this.gbxNuevoElemo.Size = new System.Drawing.Size(194, 191);
             this.gbxNuevoElemo.TabIndex = 1;
@@ -76,7 +78,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(15, 132);
+            this.btnAgregar.Location = new System.Drawing.Point(15, 136);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(158, 43);
@@ -150,7 +152,7 @@
             this.gpbEliminarElemento.Controls.Add(this.cmbCodigo);
             this.gpbEliminarElemento.Controls.Add(this.label1);
             this.gpbEliminarElemento.Controls.Add(this.btnEliminar);
-            this.gpbEliminarElemento.Location = new System.Drawing.Point(439, 5);
+            this.gpbEliminarElemento.Location = new System.Drawing.Point(439, 12);
             this.gpbEliminarElemento.Name = "gpbEliminarElemento";
             this.gpbEliminarElemento.Size = new System.Drawing.Size(200, 129);
             this.gpbEliminarElemento.TabIndex = 6;
@@ -178,7 +180,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(9, 67);
+            this.btnEliminar.Location = new System.Drawing.Point(5, 67);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(190, 37);
@@ -188,7 +190,7 @@
             // 
             // btnEquilibrar
             // 
-            this.btnEquilibrar.Location = new System.Drawing.Point(439, 144);
+            this.btnEquilibrar.Location = new System.Drawing.Point(439, 151);
             this.btnEquilibrar.Name = "btnEquilibrar";
             this.btnEquilibrar.Size = new System.Drawing.Size(200, 34);
             this.btnEquilibrar.TabIndex = 7;
@@ -201,7 +203,7 @@
             this.cmbListado.Controls.Add(this.rdbPost);
             this.cmbListado.Controls.Add(this.rdbPre);
             this.cmbListado.Controls.Add(this.rbtIn);
-            this.cmbListado.Location = new System.Drawing.Point(12, 210);
+            this.cmbListado.Location = new System.Drawing.Point(12, 216);
             this.cmbListado.Name = "cmbListado";
             this.cmbListado.Size = new System.Drawing.Size(627, 228);
             this.cmbListado.TabIndex = 8;
@@ -285,11 +287,22 @@
             this.treeView1.Size = new System.Drawing.Size(537, 426);
             this.treeView1.TabIndex = 9;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::pryEDGMolina.Properties.Resources.Binary_tree__oriented_digraph_;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(226, 196);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmArbol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1188, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.cmbListado);
             this.Controls.Add(this.btnEquilibrar);
@@ -307,6 +320,7 @@
             this.cmbListado.ResumeLayout(false);
             this.cmbListado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -335,5 +349,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTramite;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
