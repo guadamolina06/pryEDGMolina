@@ -105,6 +105,12 @@
     <Compile Include="frmColores.Designer.cs">
       <DependentUpon>frmColores.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaBaseDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaBaseDatos.Designer.cs">
+      <DependentUpon>frmConsultaBaseDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDatosDelDesarrollador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     <EmbeddedResource Include="frmColores.resx">
       <DependentUpon>frmColores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaBaseDatos.resx">
+      <DependentUpon>frmConsultaBaseDatos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDatosDelDesarrollador.resx">
       <DependentUpon>frmDatosDelDesarrollador.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,8 +233,12 @@
     <None Include="Resources\lista-enlazada.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BaseDeDatos\Libreria %282%29.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ED.ico" />
     <None Include="Resources\Binary_tree_%28oriented_digraph%29.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

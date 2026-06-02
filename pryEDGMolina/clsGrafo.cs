@@ -77,8 +77,34 @@ namespace pryEDGMolina
             {
                 Grilla.Columns.Add("Destino" + i.ToString(), Ciudades[i]);
             }
-            for (int f 00 )
+            for (int f = 0; f < 5; f++)
+            {
+                Grilla.Rows.Add(Ciudades[f]);
+                for (int c = 0; c < 5; c++)
+                {
+                    Grilla.Rows[f].Cells[c + 1].Value = precio[f, c];
+                }
+            }
 
+        }
+        public void MostrarCiudades(ComboBox cmb)
+        {
+            cmb.Items.Clear();
+            for (int i = 0; i < 5; i++)
+            {
+                cmb.Items.Add(Ciudades[i]);
+            }
+            cmb.SelectedIndex = 0;
+        }
+        public void BorrarTodo()
+        {
+            for(int f = 0; f < 5; f++)
+            {
+                for (int c = 0; c < 5; c++)
+                {
+                    precio[f, c] = 0;
+                }
+            }
         }
     }  
 }
