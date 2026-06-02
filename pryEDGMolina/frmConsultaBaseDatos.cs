@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace pryEDGMolina
 {
-    public partial class frmGrafo : Form
+    public partial class frmConsultaBaseDatos : Form
     {
-        public frmGrafo()
+        public frmConsultaBaseDatos()
         {
             InitializeComponent();
         }
-
-        private void frmGrafo_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

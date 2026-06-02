@@ -40,7 +40,9 @@ namespace pryEDGMolina
             }
             catch (Exception e)
             {
+                conexion.Close();
                 MessageBox.Show(e.Message);
+                
             }
         }
         public void Listar(String tabla,DataGridView Grilla)
@@ -65,8 +67,36 @@ namespace pryEDGMolina
             }
             catch (Exception e)
             {
+                conexion.Close();
                 MessageBox.Show(e.Message);
             }
         }
+        public void Listar(DataGridView Grilla, String varInstruccionSQL)
+        {
+            try
+            {
+                conexion.ConnectionString = cadenaconexion1;
+                conexion.Open();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = varInstruccionSQL;
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataSet DS = new DataSet();
+                adaptador.Fill(DS, "Libro");
+
+                Grilla.DataSource = null;
+                Grilla.DataSource = DS.Tables["Libro"];
+
+                conexion.Close();
+            }
+            catch (Exception e)
+            {
+                conexion.Close();
+                MessageBox.Show(e.Message);
+            }
+        }
+
     }
 }
