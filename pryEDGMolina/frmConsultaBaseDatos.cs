@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace pryEDGMolina
 {
@@ -15,6 +16,12 @@ namespace pryEDGMolina
         public frmConsultaBaseDatos()
         {
             InitializeComponent();
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            clsBaseDatos objBaseDatos = new clsBaseDatos();
+            objBaseDatos.Listar(dgvDatos, txtSql.Text);
         }
     }
 }
