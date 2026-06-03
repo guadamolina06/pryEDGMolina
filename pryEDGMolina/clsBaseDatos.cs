@@ -14,27 +14,27 @@ namespace pryEDGMolina
         private OleDbConnection conexion = new OleDbConnection();
         private OleDbCommand comando = new OleDbCommand();
         private OleDbDataAdapter adaptador = new OleDbDataAdapter();
-        private string cadenaconexion1 = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\BD.mdb";
-        private string cadenaconexion2 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\BD.mdb";
+        private string cadenaconexion1 = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Libreria.mdb";
+        private string cadenaconexion2 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\BaseDeDatos\\Libreria (2).mdb";
         
 
         public void Listar(DataGridView Grilla)
         {
             try
             {
-                conexion.ConnectionString = cadenaconexion1;
+                conexion.ConnectionString = cadenaconexion2;
                 conexion.Open();
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.TableDirect;
-                comando.CommandText = "Libros";
+                comando.CommandText = "Libreria";
 
                 DataSet DS = new DataSet();
                 adaptador = new OleDbDataAdapter(comando);
-                adaptador.Fill(DS, "Libros");
+                adaptador.Fill(DS, "Libreria");
 
                 Grilla.DataSource = null;
-                Grilla.DataSource = DS.Tables["Libros"];
+                Grilla.DataSource = DS.Tables["Libreria"];
 
                 conexion.Close();
             }
@@ -49,19 +49,19 @@ namespace pryEDGMolina
         {
             try
             {
-                conexion.ConnectionString = cadenaconexion1;
+                conexion.ConnectionString = cadenaconexion2;
                 conexion.Open();
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.TableDirect;
-                comando.CommandText = "Libros";
+                comando.CommandText = tabla;
 
                 DataSet DS = new DataSet();
                 adaptador = new OleDbDataAdapter(comando);
-                adaptador.Fill(DS, "Libros");
+                adaptador.Fill(DS, tabla);
 
                 Grilla.DataSource = null;
-                Grilla.DataSource = DS.Tables["Libros"];
+                Grilla.DataSource = DS.Tables[tabla];
 
                 conexion.Close();
             }
@@ -75,7 +75,7 @@ namespace pryEDGMolina
         {
             try
             {
-                conexion.ConnectionString = cadenaconexion1;
+                conexion.ConnectionString = cadenaconexion2;
                 conexion.Open();
 
                 comando.Connection = conexion;
@@ -84,10 +84,10 @@ namespace pryEDGMolina
 
                 adaptador = new OleDbDataAdapter(comando);
                 DataSet DS = new DataSet();
-                adaptador.Fill(DS, "Libro");
+                adaptador.Fill(DS, "Resultado");
 
                 Grilla.DataSource = null;
-                Grilla.DataSource = DS.Tables["Libro"];
+                Grilla.DataSource = DS.Tables["Resultado"];
 
                 conexion.Close();
             }

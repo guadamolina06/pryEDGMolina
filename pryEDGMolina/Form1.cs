@@ -93,6 +93,28 @@ namespace pryEDGMolina
             v.ShowDialog();
         }
 
-        
+        private void consultaDeBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaBaseDatos v = new frmConsultaBaseDatos();
+            v.ShowDialog();
+        }
+
+        private void consultaDeUnaTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDatos v = new frmBaseDatos();
+            v.ShowDialog();
+        }
+
+        private void operacionesEnBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            opBasedeDatos v = new opBasedeDatos();
+            v.ShowDialog();
+        }
+
+        private void consultasVariasConOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultasConOperaciones v = new frmConsultasConOperaciones();
+            v.ShowDialog();
+        }
     }
 }
