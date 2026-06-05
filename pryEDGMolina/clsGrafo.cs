@@ -9,7 +9,7 @@ namespace pryEDGMolina
 {
     internal class clsGrafo
     {
-        private string[] Ciudades = new string[] { "Cordoba, Mendoza, Santa Fe, Buenos Aires, Salta " };
+        private string[] Ciudades = new string[] { "Cordoba", "Mendoza", "Santa Fe", "Buenos Aires", "Salta " };
         private decimal[,] precio = new decimal[5, 5];
 
         public void Agregar(int f, int c, decimal p)

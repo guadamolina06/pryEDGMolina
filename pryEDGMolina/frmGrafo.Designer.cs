@@ -28,83 +28,93 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGrafo));
             this.gpbConsultaDatos = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtPrecioE = new System.Windows.Forms.TextBox();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.cmbEliminarDestino = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ComboBox = new System.Windows.Forms.ComboBox();
+            this.cmbEliminarOrigen = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.gbxCargaDatos = new System.Windows.Forms.GroupBox();
+            this.txtPrecioCarga = new System.Windows.Forms.TextBox();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.lblPrecioR = new System.Windows.Forms.Label();
             this.cmbOrigen = new System.Windows.Forms.ComboBox();
             this.cmbDestino = new System.Windows.Forms.ComboBox();
             this.btnBorrarTodo = new System.Windows.Forms.Button();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblDestino = new System.Windows.Forms.Label();
             this.lblOrigen = new System.Windows.Forms.Label();
-            this.btnBorrar = new System.Windows.Forms.Button();
             this.gpbListarViaje = new System.Windows.Forms.GroupBox();
-            this.llblDesde = new System.Windows.Forms.Label();
-            this.cmbListarDestino = new System.Windows.Forms.ComboBox();
-            this.btnListarDestino = new System.Windows.Forms.Button();
-            this.btnhasta = new System.Windows.Forms.Label();
-            this.cmbhasta = new System.Windows.Forms.ComboBox();
+            this.dgvDestinos = new System.Windows.Forms.DataGridView();
+            this.btnVerViajes = new System.Windows.Forms.Button();
             this.btnlistarorigenes = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cmbhasta = new System.Windows.Forms.ComboBox();
+            this.btnhasta = new System.Windows.Forms.Label();
+            this.btnListarDestino = new System.Windows.Forms.Button();
+            this.cmbListarDestino = new System.Windows.Forms.ComboBox();
+            this.llblDesde = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gpbConsultaDatos.SuspendLayout();
             this.gbxCargaDatos.SuspendLayout();
             this.gpbListarViaje.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDestinos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gpbConsultaDatos
             // 
+            this.gpbConsultaDatos.Controls.Add(this.txtPrecioE);
             this.gpbConsultaDatos.Controls.Add(this.btnBorrar);
-            this.gpbConsultaDatos.Controls.Add(this.comboBox1);
-            this.gpbConsultaDatos.Controls.Add(this.label3);
+            this.gpbConsultaDatos.Controls.Add(this.cmbEliminarDestino);
             this.gpbConsultaDatos.Controls.Add(this.label4);
             this.gpbConsultaDatos.Controls.Add(this.label2);
-            this.gpbConsultaDatos.Controls.Add(this.ComboBox);
+            this.gpbConsultaDatos.Controls.Add(this.cmbEliminarOrigen);
             this.gpbConsultaDatos.Controls.Add(this.label1);
             this.gpbConsultaDatos.Controls.Add(this.btnConsultar);
             this.gpbConsultaDatos.Location = new System.Drawing.Point(565, 17);
-            this.gpbConsultaDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbConsultaDatos.Margin = new System.Windows.Forms.Padding(4);
             this.gpbConsultaDatos.Name = "gpbConsultaDatos";
-            this.gpbConsultaDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbConsultaDatos.Padding = new System.Windows.Forms.Padding(4);
             this.gpbConsultaDatos.Size = new System.Drawing.Size(277, 201);
             this.gpbConsultaDatos.TabIndex = 9;
             this.gpbConsultaDatos.TabStop = false;
             this.gpbConsultaDatos.Text = "Consulta De Datos:";
             // 
-            // comboBox1
+            // txtPrecioE
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.txtPrecioE.Location = new System.Drawing.Point(112, 110);
+            this.txtPrecioE.Name = "txtPrecioE";
+            this.txtPrecioE.Size = new System.Drawing.Size(145, 22);
+            this.txtPrecioE.TabIndex = 12;
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Location = new System.Drawing.Point(149, 150);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(108, 39);
+            this.btnBorrar.TabIndex = 13;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
+            // cmbEliminarDestino
+            // 
+            this.cmbEliminarDestino.FormattingEnabled = true;
+            this.cmbEliminarDestino.Items.AddRange(new object[] {
             "Córdoba",
             "Mendoza",
             "Sant Fe",
             "Buenos Aires",
             "Salta"});
-            this.comboBox1.Location = new System.Drawing.Point(112, 71);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(145, 24);
-            this.comboBox1.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(112, 110);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 27);
-            this.label3.TabIndex = 12;
+            this.cmbEliminarDestino.Location = new System.Drawing.Point(112, 71);
+            this.cmbEliminarDestino.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbEliminarDestino.Name = "cmbEliminarDestino";
+            this.cmbEliminarDestino.Size = new System.Drawing.Size(145, 24);
+            this.cmbEliminarDestino.TabIndex = 11;
             // 
             // label4
             // 
@@ -126,20 +136,20 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Destino:";
             // 
-            // ComboBox
+            // cmbEliminarOrigen
             // 
-            this.ComboBox.FormattingEnabled = true;
-            this.ComboBox.Items.AddRange(new object[] {
+            this.cmbEliminarOrigen.FormattingEnabled = true;
+            this.cmbEliminarOrigen.Items.AddRange(new object[] {
             "Córdoba",
             "Mendoza",
             "Sant Fe",
             "Buenos Aires",
             "Salta"});
-            this.ComboBox.Location = new System.Drawing.Point(112, 34);
-            this.ComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ComboBox.Name = "ComboBox";
-            this.ComboBox.Size = new System.Drawing.Size(147, 24);
-            this.ComboBox.TabIndex = 2;
+            this.cmbEliminarOrigen.Location = new System.Drawing.Point(112, 34);
+            this.cmbEliminarOrigen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbEliminarOrigen.Name = "cmbEliminarOrigen";
+            this.cmbEliminarOrigen.Size = new System.Drawing.Size(147, 24);
+            this.cmbEliminarOrigen.TabIndex = 2;
             // 
             // label1
             // 
@@ -159,11 +169,12 @@
             this.btnConsultar.TabIndex = 0;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // gbxCargaDatos
             // 
+            this.gbxCargaDatos.Controls.Add(this.txtPrecioCarga);
             this.gbxCargaDatos.Controls.Add(this.btnCargar);
-            this.gbxCargaDatos.Controls.Add(this.lblPrecioR);
             this.gbxCargaDatos.Controls.Add(this.cmbOrigen);
             this.gbxCargaDatos.Controls.Add(this.cmbDestino);
             this.gbxCargaDatos.Controls.Add(this.btnBorrarTodo);
@@ -171,13 +182,20 @@
             this.gbxCargaDatos.Controls.Add(this.lblDestino);
             this.gbxCargaDatos.Controls.Add(this.lblOrigen);
             this.gbxCargaDatos.Location = new System.Drawing.Point(299, 15);
-            this.gbxCargaDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxCargaDatos.Margin = new System.Windows.Forms.Padding(4);
             this.gbxCargaDatos.Name = "gbxCargaDatos";
-            this.gbxCargaDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxCargaDatos.Padding = new System.Windows.Forms.Padding(4);
             this.gbxCargaDatos.Size = new System.Drawing.Size(259, 202);
             this.gbxCargaDatos.TabIndex = 8;
             this.gbxCargaDatos.TabStop = false;
             this.gbxCargaDatos.Text = "Cargar de Datos:";
+            // 
+            // txtPrecioCarga
+            // 
+            this.txtPrecioCarga.Location = new System.Drawing.Point(104, 112);
+            this.txtPrecioCarga.Name = "txtPrecioCarga";
+            this.txtPrecioCarga.Size = new System.Drawing.Size(145, 22);
+            this.txtPrecioCarga.TabIndex = 11;
             // 
             // btnCargar
             // 
@@ -189,15 +207,7 @@
             this.btnCargar.TabIndex = 10;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
-            // 
-            // lblPrecioR
-            // 
-            this.lblPrecioR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPrecioR.Location = new System.Drawing.Point(104, 112);
-            this.lblPrecioR.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPrecioR.Name = "lblPrecioR";
-            this.lblPrecioR.Size = new System.Drawing.Size(147, 27);
-            this.lblPrecioR.TabIndex = 9;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // cmbOrigen
             // 
@@ -209,7 +219,7 @@
             "Buenos Aires",
             "Salta"});
             this.cmbOrigen.Location = new System.Drawing.Point(104, 37);
-            this.cmbOrigen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbOrigen.Margin = new System.Windows.Forms.Padding(4);
             this.cmbOrigen.Name = "cmbOrigen";
             this.cmbOrigen.Size = new System.Drawing.Size(145, 24);
             this.cmbOrigen.TabIndex = 8;
@@ -224,7 +234,7 @@
             "Buenos Aires",
             "Salta"});
             this.cmbDestino.Location = new System.Drawing.Point(104, 74);
-            this.cmbDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbDestino.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDestino.Name = "cmbDestino";
             this.cmbDestino.Size = new System.Drawing.Size(145, 24);
             this.cmbDestino.TabIndex = 7;
@@ -239,6 +249,7 @@
             this.btnBorrarTodo.TabIndex = 6;
             this.btnBorrarTodo.Text = "Borrar Todo";
             this.btnBorrarTodo.UseVisualStyleBackColor = true;
+            this.btnBorrarTodo.Click += new System.EventHandler(this.btnBorrarTodo_Click);
             // 
             // lblPrecio
             // 
@@ -270,20 +281,10 @@
             this.lblOrigen.TabIndex = 0;
             this.lblOrigen.Text = "Origen:";
             // 
-            // btnBorrar
-            // 
-            this.btnBorrar.Location = new System.Drawing.Point(149, 150);
-            this.btnBorrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(108, 39);
-            this.btnBorrar.TabIndex = 13;
-            this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
-            // 
             // gpbListarViaje
             // 
-            this.gpbListarViaje.Controls.Add(this.dataGridView1);
-            this.gpbListarViaje.Controls.Add(this.button2);
+            this.gpbListarViaje.Controls.Add(this.dgvDestinos);
+            this.gpbListarViaje.Controls.Add(this.btnVerViajes);
             this.gpbListarViaje.Controls.Add(this.btnlistarorigenes);
             this.gpbListarViaje.Controls.Add(this.cmbhasta);
             this.gpbListarViaje.Controls.Add(this.btnhasta);
@@ -297,31 +298,43 @@
             this.gpbListarViaje.TabStop = false;
             this.gpbListarViaje.Text = "Listar Viaje...";
             // 
-            // llblDesde
+            // dgvDestinos
             // 
-            this.llblDesde.AutoSize = true;
-            this.llblDesde.Location = new System.Drawing.Point(20, 32);
-            this.llblDesde.Name = "llblDesde";
-            this.llblDesde.Size = new System.Drawing.Size(51, 16);
-            this.llblDesde.TabIndex = 0;
-            this.llblDesde.Text = "Desde:";
+            this.dgvDestinos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDestinos.Location = new System.Drawing.Point(6, 57);
+            this.dgvDestinos.Name = "dgvDestinos";
+            this.dgvDestinos.RowHeadersWidth = 51;
+            this.dgvDestinos.RowTemplate.Height = 24;
+            this.dgvDestinos.Size = new System.Drawing.Size(810, 254);
+            this.dgvDestinos.TabIndex = 7;
             // 
-            // cmbListarDestino
+            // btnVerViajes
             // 
-            this.cmbListarDestino.FormattingEnabled = true;
-            this.cmbListarDestino.Location = new System.Drawing.Point(77, 29);
-            this.cmbListarDestino.Name = "cmbListarDestino";
-            this.cmbListarDestino.Size = new System.Drawing.Size(121, 24);
-            this.cmbListarDestino.TabIndex = 1;
+            this.btnVerViajes.Location = new System.Drawing.Point(683, 28);
+            this.btnVerViajes.Name = "btnVerViajes";
+            this.btnVerViajes.Size = new System.Drawing.Size(133, 23);
+            this.btnVerViajes.TabIndex = 6;
+            this.btnVerViajes.Text = "Ver todos los viajes";
+            this.btnVerViajes.UseVisualStyleBackColor = true;
+            this.btnVerViajes.Click += new System.EventHandler(this.btnVerViajes_Click);
             // 
-            // btnListarDestino
+            // btnlistarorigenes
             // 
-            this.btnListarDestino.Location = new System.Drawing.Point(221, 29);
-            this.btnListarDestino.Name = "btnListarDestino";
-            this.btnListarDestino.Size = new System.Drawing.Size(110, 24);
-            this.btnListarDestino.TabIndex = 2;
-            this.btnListarDestino.Text = "Listar Destinos";
-            this.btnListarDestino.UseVisualStyleBackColor = true;
+            this.btnlistarorigenes.Location = new System.Drawing.Point(567, 28);
+            this.btnlistarorigenes.Name = "btnlistarorigenes";
+            this.btnlistarorigenes.Size = new System.Drawing.Size(110, 24);
+            this.btnlistarorigenes.TabIndex = 5;
+            this.btnlistarorigenes.Text = "Listar Origenes";
+            this.btnlistarorigenes.UseVisualStyleBackColor = true;
+            this.btnlistarorigenes.Click += new System.EventHandler(this.btnlistarorigenes_Click);
+            // 
+            // cmbhasta
+            // 
+            this.cmbhasta.FormattingEnabled = true;
+            this.cmbhasta.Location = new System.Drawing.Point(426, 29);
+            this.cmbhasta.Name = "cmbhasta";
+            this.cmbhasta.Size = new System.Drawing.Size(121, 24);
+            this.cmbhasta.TabIndex = 4;
             // 
             // btnhasta
             // 
@@ -332,41 +345,32 @@
             this.btnhasta.TabIndex = 3;
             this.btnhasta.Text = "Hasta:";
             // 
-            // cmbhasta
+            // btnListarDestino
             // 
-            this.cmbhasta.FormattingEnabled = true;
-            this.cmbhasta.Location = new System.Drawing.Point(426, 29);
-            this.cmbhasta.Name = "cmbhasta";
-            this.cmbhasta.Size = new System.Drawing.Size(121, 24);
-            this.cmbhasta.TabIndex = 4;
+            this.btnListarDestino.Location = new System.Drawing.Point(221, 29);
+            this.btnListarDestino.Name = "btnListarDestino";
+            this.btnListarDestino.Size = new System.Drawing.Size(110, 24);
+            this.btnListarDestino.TabIndex = 2;
+            this.btnListarDestino.Text = "Listar Destinos";
+            this.btnListarDestino.UseVisualStyleBackColor = true;
+            this.btnListarDestino.Click += new System.EventHandler(this.btnListarDestino_Click);
             // 
-            // btnlistarorigenes
+            // cmbListarDestino
             // 
-            this.btnlistarorigenes.Location = new System.Drawing.Point(567, 28);
-            this.btnlistarorigenes.Name = "btnlistarorigenes";
-            this.btnlistarorigenes.Size = new System.Drawing.Size(110, 24);
-            this.btnlistarorigenes.TabIndex = 5;
-            this.btnlistarorigenes.Text = "Listar Origenes";
-            this.btnlistarorigenes.UseVisualStyleBackColor = true;
+            this.cmbListarDestino.FormattingEnabled = true;
+            this.cmbListarDestino.Location = new System.Drawing.Point(77, 29);
+            this.cmbListarDestino.Name = "cmbListarDestino";
+            this.cmbListarDestino.Size = new System.Drawing.Size(121, 24);
+            this.cmbListarDestino.TabIndex = 1;
             // 
-            // button2
+            // llblDesde
             // 
-            this.button2.Location = new System.Drawing.Point(683, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Ver todos los viajes";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 57);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(810, 254);
-            this.dataGridView1.TabIndex = 7;
+            this.llblDesde.AutoSize = true;
+            this.llblDesde.Location = new System.Drawing.Point(20, 32);
+            this.llblDesde.Name = "llblDesde";
+            this.llblDesde.Size = new System.Drawing.Size(51, 16);
+            this.llblDesde.TabIndex = 0;
+            this.llblDesde.Text = "Desde:";
             // 
             // pictureBox1
             // 
@@ -388,7 +392,8 @@
             this.Controls.Add(this.gpbConsultaDatos);
             this.Controls.Add(this.gbxCargaDatos);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGrafo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Grafo";
@@ -399,7 +404,7 @@
             this.gbxCargaDatos.PerformLayout();
             this.gpbListarViaje.ResumeLayout(false);
             this.gpbListarViaje.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDestinos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -409,7 +414,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox gpbConsultaDatos;
-        private System.Windows.Forms.ComboBox ComboBox;
+        private System.Windows.Forms.ComboBox cmbEliminarOrigen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.GroupBox gbxCargaDatos;
@@ -419,12 +424,10 @@
         private System.Windows.Forms.Label lblOrigen;
         private System.Windows.Forms.ComboBox cmbOrigen;
         private System.Windows.Forms.ComboBox cmbDestino;
-        private System.Windows.Forms.Label lblPrecioR;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbEliminarDestino;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.GroupBox gpbListarViaje;
         private System.Windows.Forms.ComboBox cmbhasta;
@@ -432,8 +435,10 @@
         private System.Windows.Forms.Button btnListarDestino;
         private System.Windows.Forms.ComboBox cmbListarDestino;
         private System.Windows.Forms.Label llblDesde;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dgvDestinos;
+        private System.Windows.Forms.Button btnVerViajes;
         private System.Windows.Forms.Button btnlistarorigenes;
+        private System.Windows.Forms.TextBox txtPrecioE;
+        private System.Windows.Forms.TextBox txtPrecioCarga;
     }
 }

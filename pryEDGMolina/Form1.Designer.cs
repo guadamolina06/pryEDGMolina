@@ -192,15 +192,16 @@
             // arbolToolStripMenuItem
             // 
             this.arbolToolStripMenuItem.Name = "arbolToolStripMenuItem";
-            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.arbolToolStripMenuItem.Text = "Arbol...";
             this.arbolToolStripMenuItem.Click += new System.EventHandler(this.arbolToolStripMenuItem_Click);
             // 
             // graffoToolStripMenuItem
             // 
             this.graffoToolStripMenuItem.Name = "graffoToolStripMenuItem";
-            this.graffoToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.graffoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.graffoToolStripMenuItem.Text = "Graffo...";
+            this.graffoToolStripMenuItem.Click += new System.EventHandler(this.graffoToolStripMenuItem_Click);
             // 
             // baseDeDatosToolStripMenuItem
             // 

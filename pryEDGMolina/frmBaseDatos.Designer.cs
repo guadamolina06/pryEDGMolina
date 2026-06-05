@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBaseDatos));
             this.btnListar = new System.Windows.Forms.Button();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbDatos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +45,7 @@
             this.btnListar.TabIndex = 0;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // dgvDatos
             // 
@@ -56,14 +58,20 @@
             this.dgvDatos.Size = new System.Drawing.Size(776, 398);
             this.dgvDatos.TabIndex = 1;
             // 
-            // comboBox1
+            // cmbDatos
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(546, 415);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(161, 24);
-            this.comboBox1.TabIndex = 2;
+            this.cmbDatos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDatos.FormattingEnabled = true;
+            this.cmbDatos.Items.AddRange(new object[] {
+            "Autor ",
+            "Idioma",
+            "Libro",
+            "Pais"});
+            this.cmbDatos.Location = new System.Drawing.Point(546, 415);
+            this.cmbDatos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDatos.Name = "cmbDatos";
+            this.cmbDatos.Size = new System.Drawing.Size(161, 24);
+            this.cmbDatos.TabIndex = 2;
             // 
             // label1
             // 
@@ -80,9 +88,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbDatos);
             this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.btnListar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmBaseDatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -97,7 +106,7 @@
 
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.DataGridView dgvDatos;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbDatos;
         private System.Windows.Forms.Label label1;
     }
 }

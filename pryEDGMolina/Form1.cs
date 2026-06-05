@@ -116,5 +116,11 @@ namespace pryEDGMolina
             frmConsultasConOperaciones v = new frmConsultasConOperaciones();
             v.ShowDialog();
         }
+
+        private void graffoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGrafo v = new frmGrafo();
+            v.ShowDialog();
+        }
     }
 }
