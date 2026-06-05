@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaBaseDatos));
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.btnListar = new System.Windows.Forms.Button();
             this.lblConsultaSQL = new System.Windows.Forms.Label();
@@ -39,7 +40,7 @@
             // 
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Location = new System.Drawing.Point(16, 265);
-            this.dgvDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDatos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.RowHeadersWidth = 51;
             this.dgvDatos.Size = new System.Drawing.Size(913, 288);
@@ -48,7 +49,7 @@
             // btnListar
             // 
             this.btnListar.Location = new System.Drawing.Point(829, 226);
-            this.btnListar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(4);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(100, 28);
             this.btnListar.TabIndex = 1;
@@ -71,7 +72,7 @@
             // 
             this.txtSql.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSql.Location = new System.Drawing.Point(20, 42);
-            this.txtSql.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSql.Margin = new System.Windows.Forms.Padding(4);
             this.txtSql.Multiline = true;
             this.txtSql.Name = "txtSql";
             this.txtSql.Size = new System.Drawing.Size(908, 176);
@@ -86,7 +87,8 @@
             this.Controls.Add(this.lblConsultaSQL);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.dgvDatos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConsultaBaseDatos";
             this.Text = "Consulta Base Datos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();

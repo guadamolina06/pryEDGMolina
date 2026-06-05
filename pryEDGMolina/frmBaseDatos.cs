@@ -16,5 +16,11 @@ namespace pryEDGMolina
         {
             InitializeComponent();
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            clsBaseDatos objBaseDatos = new clsBaseDatos();
+            objBaseDatos.Listar(cmbDatos.Text, dgvDatos);
+        }
     }
 }
