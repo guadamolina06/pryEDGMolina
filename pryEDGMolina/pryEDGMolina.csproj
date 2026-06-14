@@ -37,6 +37,7 @@
     <ApplicationIcon>ED.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -56,6 +57,7 @@
     <Compile Include="clsCola.cs" />
     <Compile Include="clsGrafo.cs" />
     <Compile Include="clsListaDoble.cs" />
+    <Compile Include="clsListaSimple.cs" />
     <Compile Include="clsNodos.cs" />
     <Compile Include="clsPila.cs" />
     <Compile Include="Form1.cs">
